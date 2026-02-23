@@ -1,22 +1,5 @@
 
 
-.page-hero {
-  padding: 160px 0 80px;
-  background: var(--bg-white);
-  position: relative;
-  overflow: hidden;
-}
-
-.page-hero::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background:
-    radial-gradient(ellipse 70% 60% at 80% 20%, rgba(5, 150, 105, 0.06) 0%, transparent 70%),
-    radial-gradient(ellipse 50% 50% at 20% 80%, rgba(13, 148, 136, 0.04) 0%, transparent 70%);
-  pointer-events: none;
-}
-
 .page-hero .breadcrumb {
   display: flex;
   align-items: center;

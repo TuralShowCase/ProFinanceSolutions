@@ -1,22 +1,5 @@
 
 
-.page-hero {
-  padding: 160px 0 80px;
-  background: var(--bg-white);
-  position: relative;
-  overflow: hidden;
-}
-
-.page-hero::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background:
-    radial-gradient(ellipse 70% 60% at 80% 20%, rgba(5, 150, 105, 0.06) 0%, transparent 70%),
-    radial-gradient(ellipse 50% 50% at 20% 80%, rgba(13, 148, 136, 0.04) 0%, transparent 70%);
-  pointer-events: none;
-}
-
 .page-hero .breadcrumb {
   display: flex;
   align-items: center;
@@ -199,18 +182,24 @@
 }
 
 .approach-strip .section-label {
-  color: rgba(255, 255, 255, 0.55);
-  border-color: rgba(255, 255, 255, 0.1);
-  background: rgba(255, 255, 255, 0.08);
+  color: var(--accent-teal);
+  border-color: rgba(16, 185, 129, 0.25);
+  background: rgba(16, 185, 129, 0.1);
+  font-size: 0.9375rem;
+  padding: 8px 20px;
 }
 
 .approach-strip h2 {
   color: #fff;
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
   margin-bottom: 12px;
 }
 
 .approach-strip .sub-text {
   color: rgba(255, 255, 255, 0.65);
+  line-height: 1.7;
   margin-bottom: 0;
 }
 

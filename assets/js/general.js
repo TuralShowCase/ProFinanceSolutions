@@ -109,4 +109,39 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+
+  
+  const pageHero = document.querySelector('.page-hero');
+  if (pageHero) {
+    const glow = document.createElement('div');
+    glow.classList.add('hero-glow');
+    pageHero.appendChild(glow);
+
+    let mouseX = 0, mouseY = 0;
+    let glowX = 0, glowY = 0;
+    let rafId = null;
+
+    const updateGlow = () => {
+      glowX += (mouseX - glowX) * 0.15;
+      glowY += (mouseY - glowY) * 0.15;
+      glow.style.left = glowX + 'px';
+      glow.style.top = glowY + 'px';
+      rafId = requestAnimationFrame(updateGlow);
+    };
+
+    pageHero.addEventListener('mouseenter', () => {
+      rafId = requestAnimationFrame(updateGlow);
+    });
+
+    pageHero.addEventListener('mouseleave', () => {
+      if (rafId) cancelAnimationFrame(rafId);
+    });
+
+    pageHero.addEventListener('mousemove', (e) => {
+      const rect = pageHero.getBoundingClientRect();
+      mouseX = e.clientX - rect.left;
+      mouseY = e.clientY - rect.top;
+    });
+  }
+
 });
