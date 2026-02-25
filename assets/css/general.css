@@ -122,12 +122,12 @@
 }
 
 [data-theme="dark"] .theme-toggle {
-  color: #fbbf24;
+  color: #fff;
 }
 
 [data-theme="dark"] .theme-toggle:hover {
-  background: rgba(251, 191, 36, 0.1);
-  color: #fbbf24;
+  background: var(--accent-light);
+  color: var(--accent);
 }
 
 *,
@@ -414,7 +414,7 @@ p {
 }
 
 .navbar-main .navbar-brand .brand-logo {
-  height: clamp(32px, 4vw, 46px);
+  height: clamp(38px, 5vw, 54px);
   width: auto;
   object-fit: contain;
   margin-right: 8px; 
@@ -562,7 +562,7 @@ p {
 }
 
 .footer-brand .brand-logo {
-  height: clamp(32px, 4vw, 46px);
+  height: clamp(38px, 5vw, 54px);
   width: auto;
   object-fit: contain;
   filter: brightness(0) invert(1);
