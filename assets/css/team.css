@@ -1,21 +1,4 @@
 
-.page-hero .breadcrumb {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  margin-bottom: var(--space-sm);
-  font-size: 0.875rem;
-  color: var(--text-muted);
-}
-
-.page-hero .breadcrumb a {
-  color: var(--text-muted);
-  text-decoration: none;
-  transition: color var(--transition);
-}
-
-.page-hero .breadcrumb a:hover { color: var(--accent); }
-.page-hero .breadcrumb-sep { color: var(--border-soft); }
 
 .page-hero h1 {
   font-size: clamp(2.5rem, 5vw, 4rem);
@@ -138,54 +121,6 @@
   margin: 0;
 }
 
-
-.team-cta {
-  padding: 80px 0;
-  background: linear-gradient(135deg, var(--bg-dark) 0%, #14201b 100%);
-  text-align: center;
-  position: relative;
-  overflow: hidden;
-}
-
-.team-cta::before {
-  content: '';
-  position: absolute;
-  top: -150px;
-  right: -150px;
-  width: 400px;
-  height: 400px;
-  background: radial-gradient(circle, rgba(5,150,105,0.12) 0%, transparent 70%);
-  pointer-events: none;
-}
-
-.team-cta h2 {
-  font-size: clamp(1.5rem, 3vw, 2.2rem);
-  font-weight: 800;
-  color: #fff;
-  margin-bottom: 16px;
-  letter-spacing: -0.02em;
-}
-
-.team-cta p {
-  color: rgba(255,255,255,0.6);
-  max-width: 500px;
-  margin: 0 auto 32px;
-  line-height: 1.6;
-}
-
-
-[data-theme="dark"] .team-card {
-  background: #14201b;
-  border-color: rgba(255, 255, 255, 0.06);
-}
-
-[data-theme="dark"] .team-card:hover {
-  border-color: rgba(5, 150, 105, 0.2);
-}
-
-[data-theme="dark"] .team-cta {
-  background: linear-gradient(135deg, #060d0a 0%, #0b1210 100%);
-}
 
 
 @media (max-width: 767.98px) {

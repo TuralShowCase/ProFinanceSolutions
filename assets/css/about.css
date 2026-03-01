@@ -1,27 +1,5 @@
 
 
-.page-hero .breadcrumb {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  margin-bottom: var(--space-sm);
-  font-size: 0.875rem;
-  color: var(--text-muted);
-}
-
-.page-hero .breadcrumb a {
-  color: var(--text-muted);
-  text-decoration: none;
-  transition: color var(--transition);
-}
-
-.page-hero .breadcrumb a:hover {
-  color: var(--accent);
-}
-
-.page-hero .breadcrumb-sep {
-  color: var(--text-body);
-}
 
 .page-hero h1 {
   font-size: clamp(2.5rem, 5vw, 4rem);
@@ -274,54 +252,6 @@
   color: var(--text-body);
   line-height: 1.65;
   margin: 0;
-}
-
-
-.about-cta {
-  padding: 80px 0;
-  background: var(--bg-dark);
-  position: relative;
-  overflow: hidden;
-  text-align: center;
-}
-
-[data-theme="dark"] .about-cta {
-  background: #081510;
-}
-
-.about-cta::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background:
-    radial-gradient(ellipse 60% 80% at 30% 50%, rgba(5, 150, 105, 0.25) 0%, transparent 60%),
-    radial-gradient(ellipse 40% 60% at 80% 30%, rgba(13, 148, 136, 0.15) 0%, transparent 60%);
-  pointer-events: none;
-}
-
-.about-cta h2 {
-  font-size: clamp(1.75rem, 3vw, 2.5rem);
-  font-weight: 800;
-  color: #fff;
-  letter-spacing: var(--heading-ls);
-  margin-bottom: 16px;
-  position: relative;
-}
-
-.about-cta p {
-  color: rgba(255, 255, 255, 0.7);
-  font-size: 1.0625rem;
-  margin-bottom: 32px;
-  position: relative;
-}
-
-.about-cta .btn-primary-custom {
-  position: relative;
-  background: var(--accent);
-}
-
-.about-cta .btn-primary-custom:hover {
-  background: var(--accent-hover);
 }
 
 

@@ -523,6 +523,65 @@ p {
   }
 }
 
+.cta-banner {
+  padding: 80px 0;
+  background: linear-gradient(135deg, var(--bg-dark) 0%, #14201b 100%);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-banner::before {
+  content: '';
+  position: absolute;
+  top: -100px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(5,150,105,0.12) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.cta-banner h2 {
+  color: var(--text-white);
+  margin-bottom: var(--space-md);
+  position: relative;
+  z-index: 1;
+}
+
+.cta-banner p {
+  color: rgba(255,255,255,0.6);
+  font-size: 1.0625rem;
+  max-width: 480px;
+  margin: 0 auto var(--space-lg);
+  position: relative;
+  z-index: 1;
+}
+
+.cta-banner .btn-primary-custom {
+  position: relative;
+  z-index: 1;
+}
+
+/* CTA Banner - Light Variant */
+.cta-banner.is-light {
+  background: var(--bg-white);
+  border-top: 1px solid var(--border-soft);
+  border-bottom: 1px solid var(--border-soft);
+}
+
+.cta-banner.is-light::before {
+  background: radial-gradient(circle, rgba(5,150,105,0.06) 0%, transparent 70%);
+}
+
+.cta-banner.is-light h2 {
+  color: var(--brand-primary);
+}
+
+.cta-banner.is-light p {
+  color: var(--text-body);
+}
 
 .footer {
   background-color: var(--bg-dark);
@@ -724,8 +783,8 @@ p {
 
 .footer-bottom p {
   margin: 0;
-  font-size: 0.8125rem;
-  color: rgba(255, 255, 255, 0.35);
+  font-size: 0.9375rem;
+  color: rgba(255, 255, 255, 0.5);
 }
 
 .footer-social {
@@ -808,17 +867,38 @@ p {
 }
 
 .page-hero .breadcrumb {
+  display: inline-flex;
+  align-items: center;
   justify-content: center;
+  gap: 8px;
   margin-bottom: var(--space-md);
-}
-
-.page-hero .breadcrumb-item {
   font-size: 0.875rem;
   color: var(--text-muted);
+  background: rgba(255, 255, 255, 0.6);
+  padding: 8px 20px;
+  border-radius: 50px;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
 }
 
-.page-hero .breadcrumb-item a {
+.page-hero .breadcrumb a {
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: color var(--transition);
+  font-weight: 500;
+}
+
+.page-hero .breadcrumb a:hover {
   color: var(--accent);
+}
+
+.page-hero .breadcrumb-sep {
+  color: var(--border-soft);
+  font-size: 0.75rem;
+  display: flex;
+  align-items: center;
 }
 
 .page-hero h1 {
@@ -849,6 +929,32 @@ p {
 
 [data-theme="dark"] .hero-glow {
   background: radial-gradient(circle, rgba(5, 150, 105, 0.18) 0%, transparent 70%);
+}
+
+[data-theme="dark"] .cta-banner {
+  background: #081510;
+}
+
+[data-theme="dark"] .cta-banner.is-light {
+  background: #14201b;
+}
+
+[data-theme="dark"] .page-hero .breadcrumb {
+  background: rgba(0, 0, 0, 0.2);
+  border-color: rgba(255, 255, 255, 0.05);
+  color: rgba(255, 255, 255, 0.7);
+}
+
+[data-theme="dark"] .page-hero .breadcrumb a {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+[data-theme="dark"] .page-hero .breadcrumb a:hover {
+  color: var(--accent);
+}
+
+[data-theme="dark"] .page-hero .breadcrumb-sep {
+  color: rgba(255, 255, 255, 0.3);
 }
 
 
@@ -882,6 +988,10 @@ p {
   .page-hero {
     padding: 140px 0 60px;
   }
+
+  .cta-banner {
+    padding: 60px 0;
+  }
 }
 
 @media (max-width: 575.98px) {
@@ -893,5 +1003,47 @@ p {
   .btn-outline-custom {
     padding: 14px 28px;
     font-size: 0.875rem;
+  }
+}
+
+/* WhatsApp Floating Button */
+.whatsapp-float {
+  position: fixed;
+  width: 56px;
+  height: 56px;
+  bottom: 24px;
+  right: 24px;
+  background-color: #25d366;
+  color: #FFF !important;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 28px;
+  box-shadow: 0 4px 14px rgba(37, 211, 102, 0.4);
+  z-index: 1050;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: all var(--transition);
+}
+
+.whatsapp-float:hover {
+  background-color: #1ebe57;
+  color: #fff !important;
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 8px 20px rgba(37, 211, 102, 0.5);
+}
+
+[data-theme="dark"] .whatsapp-float {
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4);
+}
+
+@media (max-width: 767.98px) {
+  .whatsapp-float {
+    width: 48px;
+    height: 48px;
+    font-size: 24px;
+    bottom: 16px;
+    right: 16px;
   }
 }
